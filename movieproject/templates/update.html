@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<br>
+<form method="post" enctype="multipart/form-data" style="color:silver;background-image:url({% static 'images/bg7.jpg' %});">
+{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" style="border-radius:1em 1em 1em;background-color:silver;">
+</form>
+{% endblock %}

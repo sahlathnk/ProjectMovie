@@ -1,0 +1,18 @@
+body{
+background-color:lavender;
+
+}
+.formstyle{
+border:2px solid red;
+color:red;
+}
+
+ .grid-container {
+   display:grid;
+   grid-template-columns:auto auto auto auto auto auto auto;
+   grid-gap:5px;
+ }
+
+#grid2{
+    grid-template-columns:auto auto;
+}

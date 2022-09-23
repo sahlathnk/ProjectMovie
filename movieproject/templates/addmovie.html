@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<head>
+  <style>
+    body {background-image:url({% static 'images/bg3.jpg' %});}
+
+  </style>
+</head>
+{% block body %}
+<body style="background-image:url({% static 'images/bg6.jpg' %});background-size:cover;">
+<form style="text-align:center;" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <br>
+  <h1 style="color:white;">Add a Movie</h1>
+  <h2 style="color:white">Enter Movie Details</h2><br>
+  <h4>
+  <input style="border-radius:2em 2em 2em;" type="text" name="name" placeholder="Movie name" size="40"><br><br>
+  <input style="border-radius:2em 2em 2em;" type="text" name="desc" placeholder="Movie type" size="40"><br><br>
+  <input style="border-radius:2em 2em 2em;" type="text" name="detail" placeholder="Describe the movie in few lines" size="40"><br><br>
+  <input style="border-radius:2em 2em 2em;" type="number" name="year" placeholder="Year" size="40"><br><br>
+  <input style="color:white;" type="file" name="img" ><br><br>
+  <input style="border-radius:2em 2em 2em;color:black;" type="submit" value="Add Movie">
+  </h4>
+</form>
+</body>
+{% endblock %}
